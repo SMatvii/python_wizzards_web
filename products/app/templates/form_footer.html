@@ -1,0 +1,13 @@
+{% macro form_footer(form) %}
+    {% if form.email %}
+        <div class="form-header">Реєстрація</div>
+        <div class="form-footer">
+            Не маєте акаунту? <a href="{{ url_for('register') }}">Зареєструватися</a>
+        </div>
+    {% else %}
+        <div class="form-header">Вхід в акаунт</div>
+        <div class="form-footer">
+            Вже маєте акаунт? <a href="{{ url_for('login') }}">Війти</a>
+        </div>
+    {% endif %}
+{% endmacro %}

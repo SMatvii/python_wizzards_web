@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% from '_helpers.html' import form_generate %}
+{% from '_helpers.html' import form_footer %}
+{% block main %}
+    <div class="form-container">
+        {{ form_generate(form) }}
+        {{ form_footer(form) }}
+    </div>
+{% endblock %}
